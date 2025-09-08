@@ -1,18 +1,29 @@
 #include <iostream>
 #include <stdio.h>
-// using namespace std;
 
-namespace	TestSpace{
-	int	num_var = 1;
-}
+int main(int argc, char **argv) {
+	(void)argv;
+	int	i = 1;
+	int	j = 0;
 
-namespace	SecondTestSpace{
-	int	num_var = 3;
-}
-
-int main() {
-	// std::cout << "Test 1: \n";
-	printf("Test 1: %d\n", TestSpace::num_var);
-	printf("Test 2: %d\n", SecondTestSpace::num_var);
+	if (argc < 2)
+	{
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
+		return (0);
+	}
+	while (argv[i])
+	{
+		j = 0;
+		while (argv[i][j])
+		{
+			if (argv[i][j] >= 'a' && argv[i][j] <= 'z')
+			{
+				argv[i][j] -= 32;
+			}
+			j++;
+		}
+		i++;
+	}
+	std::cout << argv[1] << "\n";
 	return 0;
 }
