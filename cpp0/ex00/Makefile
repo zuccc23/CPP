@@ -59,7 +59,7 @@ $(OBJ_DIR):
 
 # COMPILING .c FILES INTO .o FILES (INSIDE OBJ DIR)
 $(OBJ_DIR)/%.o: %.cpp 
-	@echo "${ITALIC}Compiling ✰ $<✰${RESET}"
+	@echo "${ITALIC}Compiling ✰ $< ✰${RESET}"
 	@${CC} ${CPPFLAGS} -c $< -o $@
 
 # BASIC RULES
@@ -69,7 +69,7 @@ clean:
 
 fclean: clean
 	@rm -rf $(NAME)
-	@echo "${ITALIC}⯨Cleaning everything⯩${RESET}"
+	@echo "${ITALIC}Cleaning everything ✦ ⭒${RESET}"
 
 re: fclean all
 

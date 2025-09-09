@@ -1,29 +1,20 @@
 #include <iostream>
-#include <stdio.h>
+#include <algorithm>
 
 int main(int argc, char **argv) {
-	(void)argv;
-	int	i = 1;
-	int	j = 0;
+	std::string	temp;
 
 	if (argc < 2)
 	{
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
 		return (0);
 	}
-	while (argv[i])
+	for (int i = 1; argv[i]; i++)
 	{
-		j = 0;
-		while (argv[i][j])
-		{
-			if (argv[i][j] >= 'a' && argv[i][j] <= 'z')
-			{
-				argv[i][j] -= 32;
-			}
-			j++;
-		}
-		i++;
+		temp = argv[i];
+		std::transform(temp.begin(), temp.end(), temp.begin(), ::toupper);
+		std::cout << temp;
 	}
-	std::cout << argv[1] << "\n";
+	std::cout << "\n";
 	return 0;
 }
