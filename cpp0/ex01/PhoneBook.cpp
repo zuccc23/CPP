@@ -1,18 +1,27 @@
 #include "PhoneBook.class.hpp"
 #include <iostream>
 
-PhoneBook::PhoneBook(int num) : numm(num)
+PhoneBook::PhoneBook(void)
 {
 	std::cout << "constructor" << std::endl;
-	this->test();
+	_contacts[0].setFname("01234567890");
+	_contacts[1].setFname("012345");
 }
 
-PhoneBook::~PhoneBook()
+PhoneBook::~PhoneBook(void)
 {
 	std::cout << "destructor" << std::endl;
 }
 
-void	PhoneBook::test(void)
+
+void	PhoneBook::display_contact_list(void)
 {
-	std::cout << "test function" << std::endl;
+	std::cout << "     index|first name| last name|  nickname|" << std::endl;
+	for (int i = 0; i < 8; i++)
+	{
+		std::cout << "         " << i << "|";
+		std::cout << _contacts[i].getFname() << "|";
+		std::cout << std::endl;
+	}
+	return;
 }

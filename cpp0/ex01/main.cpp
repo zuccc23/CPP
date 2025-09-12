@@ -4,10 +4,20 @@
 
 int	main(void)
 {
-	PhoneBook instance(23);
-	std::cout << "in main: "  << instance.numm << std::endl;
-	Contact	contact;
+	std::string buff;
+	PhoneBook phonebook;
 
-	contact.nickname = "helo";
-
+	std::cout << "-----IN MAIN-----" << std::endl;
+	
+	// phonebook.show_contact();
+	// while (1)
+	// {
+	// 	if ()
+	// }
+	// std::cin >> buff;
+	// std::cout << buff << std::endl;
+	// std::cin >> buff;
+	// std::cout << buff << std::endl;
+	phonebook.display_contact_list();
+	std::cout << "-----END OF PROGRAM-----" << std::endl;
 }
