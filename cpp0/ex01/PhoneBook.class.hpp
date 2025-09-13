@@ -8,10 +8,14 @@ class PhoneBook{
 	public:
 	PhoneBook(void);
 	~PhoneBook(void);
-	void	display_contact_list(void);
+	void	search(void);
+	void	add(void);
 
 	private:
 	Contact _contacts[8];
+	void	display_contact_list(void);
+	void	display_contact(int index);
+	int		index;
 };
 
 # endif

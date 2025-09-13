@@ -2,18 +2,34 @@
 #include <iostream>
 #include <string.h>
 
+// CONSTRUCTOR - DESTRUCTOR /////////////////////
+
 Contact::Contact(void)
 {
-	std::cout << "construct contact" << std::endl;
-	setFname("         ");
 	return;
 }
 
 Contact::~Contact(void)
 {
-	std::cout << "destruct contact" << std::endl;
 	return;
 }
+
+void	Contact::displayName(std::string name)
+{
+	if (name.length() > 10)
+	{
+		name.erase(10);
+		name.replace(9, 1, 1, '.');
+	}
+	while (name.length() < 10)
+	{
+		name.insert(0, " ");
+	}
+	std::cout << name ;
+	return;
+}
+
+// SETTER - GETTER //////////////////////////
 
 std::string	Contact::getFname(void)
 {
@@ -23,14 +39,49 @@ std::string	Contact::getFname(void)
 void	Contact::setFname(std::string name)
 {
 	this->first_name = name;
-	if (this->first_name.length() > 10)
-	{
-		this->first_name.erase(10);
-		this->first_name.replace(9, 1, 1, '.');
-	}
-	while (this->first_name.length() < 10)
-	{
-		this->first_name.insert(0, " ");
-	}
+	return;
+}
+
+std::string	Contact::getLname(void)
+{
+	return (this->last_name);
+}
+
+void	Contact::setLname(std::string name)
+{
+	this->last_name = name;
+	return;
+}
+
+std::string	Contact::getNickname(void)
+{
+	return (this->nickname);
+}
+
+void	Contact::setNickname(std::string name)
+{
+	this->nickname = name;
+	return;
+}
+
+std::string	Contact::getNumber(void)
+{
+	return (this->number);
+}
+
+void	Contact::setNumber(std::string name)
+{
+	this->number = name;
+	return;
+}
+
+std::string	Contact::getSecret(void)
+{
+	return (this->secret);
+}
+
+void	Contact::setSecret(std::string name)
+{
+	this->secret = name;
 	return;
 }
