@@ -46,27 +46,50 @@ void	PhoneBook::add(void)
 
 	if (index >= 8)
 		this->index = 0;
-		
+
 	std::cout << "First name: ";
 	std::getline(std::cin, name);
-	if (name.empty())
-		std::cout << "empty";
+	while (name.empty())
+	{
+		std::cout << "No category can be left empty, please enter something\n";
+		std::getline(std::cin, name);
+	}
 	_contacts[index].setFname(name);
 
 	std::cout << "Last name: ";
 	std::getline(std::cin, name);
+	while (name.empty())
+	{
+		std::cout << "No category can be left empty, please enter something\n";
+		std::getline(std::cin, name);
+	}
 	_contacts[index].setLname(name);
 
 	std::cout << "Nickname: ";
 	std::getline(std::cin, name);
+	while (name.empty())
+	{
+		std::cout << "No category can be left empty, please enter something\n";
+		std::getline(std::cin, name);
+	}
 	_contacts[index].setNickname(name);
 
 	std::cout << "Phone number: ";
 	std::getline(std::cin, name);
+	while (name.empty())
+	{
+		std::cout << "No category can be left empty, please enter something\n";
+		std::getline(std::cin, name);
+	}
 	_contacts[index].setNumber(name);
 
 	std::cout << "Darkest secret: ";
 	std::getline(std::cin, name);
+	while (name.empty())
+	{
+		std::cout << "No category can be left empty, please enter something\n";
+		std::getline(std::cin, name);
+	}
 	_contacts[index].setSecret(name);
 	this->index++;
 }

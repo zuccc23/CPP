@@ -39,17 +39,7 @@ $(NAME): $(OBJ_DIR) $(OBJ)
 	@${CC} ${CPPFLAGS} $(OBJ) -o $(NAME)
 
 # CREATING OBJECT DIRECTORIES
-$(OBJ_DIR):                           
-	@echo "     .----------------."
-	@echo "    /    _H______H_    \@,"
-	@echo "    \____/        \____/ @,"
-	@echo "	/            \    @"
-	@echo "	|  LI LI LI  |    ,@"
-	@echo "	|  LI LI LI  |   ,@'"
-	@echo "	|  LI LI LI  |  ,@'"
-	@echo "	|  LI LI LI  |@@'"
-	@echo "	\            /'"
-	@echo "          ----------'"
+$(OBJ_DIR):
 	@mkdir -p $@
 
 # COMPILING .c FILES INTO .o FILES (INSIDE OBJ DIR)
