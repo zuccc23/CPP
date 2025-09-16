@@ -21,7 +21,8 @@ int	main(void)
 	while (1)
 	{
 		std::cout << std::endl << "Enter a command: \033[1;32mADD\033[0m, \033[1;34mSEARCH\033[0m, or \033[1;31mEXIT\033[0m" << std::endl;
-		std::getline(std::cin, input);
+		if (!std::getline(std::cin, input))
+			exit(1);
 		if (input == "SEARCH" || input == "search")
 			phonebook.search();
 		else if (input == "ADD" || input == "add")

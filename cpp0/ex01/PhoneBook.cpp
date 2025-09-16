@@ -32,7 +32,7 @@ void	PhoneBook::search(void)
 			std::cout << "The index entered is invalid. Try again with an index between 0-7" << std::endl;
 		else if (index > 7 || index < 0)
 			std::cout << "The index entered is invalid. Try again with an index between 0-7" << std::endl;
-		else if (index >= 0 || index < 8)
+		else if (index >= 0 && index < 8)
 		{
 			display_contact(index);
 			return;

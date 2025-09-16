@@ -26,6 +26,7 @@ void	Contact::displayName(std::string name)
 		name.insert(0, " ");
 	}
 	std::cout << name ;
+
 	return;
 }
 
