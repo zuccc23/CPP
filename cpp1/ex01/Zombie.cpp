@@ -2,9 +2,8 @@
 
 // CONSTRUCTOR - DESTRUCTOR /////////////////////
 
-Zombie::Zombie(std::string zombie_name)
+Zombie::Zombie(void)
 {
-	name = zombie_name;
 	return;
 }
 
@@ -15,6 +14,11 @@ Zombie::~Zombie(void)
 }
 
 // PUBLIC /////////////////////
+
+void	Zombie::setName(std::string zombie_name)
+{
+	name = zombie_name;
+}
 
 void	Zombie::announce(void)
 {
