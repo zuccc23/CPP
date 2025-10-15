@@ -16,7 +16,10 @@ int	main(void)
 	std::cout << b << std::endl;
 	std::cout << Fixed::max( a, b ) << std::endl;
 
-	
+	if (a > b)
+		std::cout << "true\n";
+	else
+		std::cout << "false\n";
 
 	return (0);
 }
