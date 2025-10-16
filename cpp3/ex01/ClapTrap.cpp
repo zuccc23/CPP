@@ -12,13 +12,13 @@ ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10), _energyPoint
 
 //COPY CONSTRUCTOR
 ClapTrap::ClapTrap(const ClapTrap& to_copy) {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "Copy constructor called." << std::endl;
 	*this = to_copy;
 }
 
 //COPY ASSIGNMENT
 ClapTrap& ClapTrap::operator=(const ClapTrap& to_copy) {
-	std::cout << "Copy assignment operator called" << std::endl;
+	std::cout << "Copy assignment operator called." << std::endl;
 	if (this != &to_copy)
 	{
 		_name = to_copy._name;
@@ -67,5 +67,3 @@ void ClapTrap::beRepaired(unsigned int amount)
 	_energyPoints--;
 }
 
-
-//PRIVATE

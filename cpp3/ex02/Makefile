@@ -19,7 +19,7 @@ CC = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 # SOURCE 
-SRC = main.cpp Fixed.cpp
+SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 
 # DIRECTORIES
 OBJ_DIR = obj
@@ -28,7 +28,7 @@ OBJ_DIR = obj
 OBJ = $(patsubst %.cpp, $(OBJ_DIR)/%.o, $(SRC))
 
 # PROGRAM NAME
-NAME = fixed
+NAME = fragtrap
 
 # DEFAULT TARGET
 all: $(NAME)
