@@ -45,7 +45,10 @@
 		"prefix": "header_define",
 		"body": [
 		"#ifndef ${1:NameHeader}\n",
-		"# define ${1:NameHeader}\n\n\n",
+		"# define ${1:NameHeader}\n",
+		"#include <string.h>",
+		"#include <iostream>",
+		"#include <stdlib.h>\n\n\n",
 		"#endif"
 		],
 		"description": "write header info"
