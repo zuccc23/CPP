@@ -10,10 +10,10 @@ class Animal {
 		Animal();
 		Animal(const Animal& to_copy);
 		Animal& operator=(const Animal& to_copy);
-		~Animal();
+		virtual ~Animal();
 
-		std::string	getType();
-		void	setType(Animal animal);
+		std::string	getType() const;
+		virtual void	makeSound(void) const;
 
 	protected:
 		std::string _type;

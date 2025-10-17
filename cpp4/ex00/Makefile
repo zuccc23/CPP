@@ -19,7 +19,7 @@ CC = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 # SOURCE 
-SRC = main.cpp ClapTrap.cpp
+SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
 
 # DIRECTORIES
 OBJ_DIR = obj
@@ -28,7 +28,7 @@ OBJ_DIR = obj
 OBJ = $(patsubst %.cpp, $(OBJ_DIR)/%.o, $(SRC))
 
 # PROGRAM NAME
-NAME = claptrap
+NAME = animal
 
 # DEFAULT TARGET
 all: $(NAME)

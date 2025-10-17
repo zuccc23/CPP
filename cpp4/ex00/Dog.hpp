@@ -14,6 +14,8 @@ class Dog : public Animal{
 		Dog& operator=(const Dog& to_copy);
 		~Dog();
 
+		void	makeSound() const;
+
 	private:
 		/*content*/
 	

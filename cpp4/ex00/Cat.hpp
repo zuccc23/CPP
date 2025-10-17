@@ -13,6 +13,8 @@ class Cat : public Animal {
 		Cat& operator=(const Cat& to_copy);
 		~Cat();
 
+		void	makeSound(void) const;
+
 	private:
 		/*content*/
 	

@@ -1,7 +1,8 @@
 #include "Dog.hpp"
 
 //CONSTRUCTOR
-Dog::Dog() : Animal() {
+Dog::Dog(){
+	_type = "Dog";
 	std::cout << "Dog constructor called." << std::endl;
 }
 
@@ -25,5 +26,9 @@ Dog::~Dog() {
 }
 
 //PUBLIC
+void	Dog::makeSound() const
+{
+	std::cout << "Woof!!!"<< std::endl;
+}
 
 //PRIVATE

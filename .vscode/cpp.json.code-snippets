@@ -41,6 +41,17 @@
 		"description": "Implement the canon form"
 	},
 
+	"Main cpp": {
+		"prefix": "cpp_main",
+		"body": [
+		"std::cout << std::endl << \"===== Making objects =====\" << std::endl ;\n\n",
+		"std::cout << std::endl << \"===== Tests =====\" << std::endl ;\n\n",
+		"std::cout << std::endl << \"===== Destructors =====\" << std::endl ;\n",
+		"return(0);"
+		],
+		"description": "basic cpp main"
+	},
+
 	"header define": {
 		"prefix": "header_define",
 		"body": [

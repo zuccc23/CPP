@@ -1,7 +1,8 @@
 #include "Cat.hpp"
 
 //CONSTRUCTOR
-Cat::Cat() : Animal() {
+Cat::Cat() {
+	_type = "Cat";
 	std::cout << "Cat constructor called." << std::endl;
 }
 
@@ -25,5 +26,9 @@ Cat::~Cat() {
 }
 
 //PUBLIC
+void	Cat::makeSound(void) const
+{
+	std::cout << "mmeeooowwwww!!!!"<< std::endl;
+}
 
 //PRIVATE

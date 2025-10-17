@@ -1,7 +1,7 @@
 #include "Animal.hpp"
 
 //CONSTRUCTOR
-Animal::Animal() : _type("unknown") {
+Animal::Animal() : _type("Unknown animal") {
 	std::cout << "Animal constructor called." << std::endl;
 }
 
@@ -26,14 +26,14 @@ Animal::~Animal() {
 
 //PUBLIC
 
-std::string	Animal::getType(void)
+std::string	Animal::getType(void) const
 {
 	return (_type);
 }
 
-void	Animal::setType(Animal animal)
+void	Animal::makeSound(void) const
 {
-	_type = animal.getType();
+	std::cout << "Some animal made a sound."<< std::endl;
 }
 
 //PRIVATE
