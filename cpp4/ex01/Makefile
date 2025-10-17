@@ -19,7 +19,7 @@ CC = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 # SOURCE 
-SRC = main.cpp ClapTrap.cpp
+SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
 
 # DIRECTORIES
 OBJ_DIR = obj
@@ -28,11 +28,11 @@ OBJ_DIR = obj
 OBJ = $(patsubst %.cpp, $(OBJ_DIR)/%.o, $(SRC))
 
 # PROGRAM NAME
-NAME = claptrap
+NAME = animalBrain
 
 # DEFAULT TARGET
 all: $(NAME)
-	@echo "${BOLD}${LIGHTPINK}Ex00 ready !✦${RESET}"
+	@echo "${BOLD}${LIGHTPINK}Ex01 ready !✦${RESET}"
 
 # LINKING EXECUTABLE
 $(NAME): $(OBJ_DIR) $(OBJ)

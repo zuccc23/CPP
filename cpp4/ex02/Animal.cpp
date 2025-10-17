@@ -6,7 +6,7 @@ Animal::Animal() : _type("Unknown animal") {
 }
 
 //COPY CONSTRUCTOR
-Animal::Animal(const Animal& to_copy)  : _type(to_copy._type) {
+Animal::Animal(const Animal& to_copy) : _type(to_copy._type) {
 	std::cout << "Animal copy constructor called." << std::endl;
 }
 

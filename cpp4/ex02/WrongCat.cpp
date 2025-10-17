@@ -9,6 +9,7 @@ WrongCat::WrongCat() {
 //COPY CONSTRUCTOR
 WrongCat::WrongCat(const WrongCat& to_copy) : WrongAnimal(to_copy) {
 	std::cout << "WrongCat copy constructor called." << std::endl;
+	*this = to_copy;
 }
 
 //COPY ASSIGNMENT

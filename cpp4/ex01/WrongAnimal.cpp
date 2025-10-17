@@ -6,8 +6,9 @@ WrongAnimal::WrongAnimal() : _type("Wronganimal") {
 }
 
 //COPY CONSTRUCTOR
-WrongAnimal::WrongAnimal(const WrongAnimal& to_copy) : _type(to_copy._type) {
+WrongAnimal::WrongAnimal(const WrongAnimal& to_copy) {
 	std::cout << "Wrong Animal copy constructor called." << std::endl;
+	*this = to_copy;
 }
 
 //COPY ASSIGNMENT

@@ -22,7 +22,12 @@ int	main(void)
 	minoushka.makeSound();
 	pompom.makeSound();
 
-	std::cout << "===== Wrong animals =====" << std::endl;
+	std::cout << std::endl << "===== Copy Tests =====" << std::endl;
+	Cat copyCat = minoushka;
+
+	
+
+	std::cout << std::endl << "===== Wrong animals =====" << std::endl;
 	yeti.makeSound();
 	paminou.makeSound();
 
