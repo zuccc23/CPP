@@ -6,7 +6,7 @@
 #include <iostream>
 #include <stdlib.h>
 
-class Form;
+class AForm;
 
 class Bureaucrat {
 	public:
@@ -18,7 +18,8 @@ class Bureaucrat {
 
 		std::string	getName() const;
 		int	getGrade() const;
-		void	signForm(Form& form);
+		void	signForm(AForm& form);
+		void executeForm(AForm const & form) const;
 
 		Bureaucrat&	operator++(void);
 		Bureaucrat&	operator--(void);
