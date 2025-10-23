@@ -6,17 +6,14 @@
 
 int	main(void)
 {
-	std::cout << std::endl << "===== Making objects =====" << std::endl ;
 	try
 	{
+		std::cout << std::endl << "===== Right grade Test =====" << std::endl ;
 		Bureaucrat buro("Mina", 50);
 		Form formi("Contract", 100, 51);
 
-		std::cout << std::endl << "===== Tests =====" << std::endl ;
+		std::cout << buro;
 		std::cout << formi;
-
-		// formi.beSigned(buro);
-		// std::cout << formi;
 
 		buro.signForm(formi);
 	}
@@ -25,18 +22,52 @@ int	main(void)
 		std::cout << "Caught: " << e.what() << std::endl;
 	}
 
-	// std::cout << std::endl << "===== Making objects =====" << std::endl ;
-	// try
-	// {
-	// 	// Bureaucrat buro2("pompom", 150);
-	// 	std::cout << std::endl << "===== Tests =====" << std::endl ;
-	// 	// std::cout << buro2;
-	// 	// std::cout << --buro2;
-	// }
-	// catch(const std::exception& e)
-	// {
-	// 	std::cout << "Caught: " << e.what() << std::endl;
-	// }
+	try
+	{
+		std::cout << std::endl << "===== Wrong grade Test =====" << std::endl ;
+		Bureaucrat buro("Mina", 140);
+		Form formi("Contract", 100, 51);
+		std::cout << buro;
+		std::cout << formi;
+
+		buro.signForm(formi);
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << "Caught: " << e.what() << std::endl;
+	}
+
+	try
+	{
+		std::cout << std::endl << "===== beSigned(form) Test =====" << std::endl ;
+		Bureaucrat buro("Mina", 140);
+		Form formi("Contract", 150, 51);
+		std::cout << buro;
+		std::cout << formi;
+
+		formi.beSigned(buro);
+		std::cout << formi;
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << "Caught: " << e.what() << std::endl;
+	}
+
+	try
+	{
+		std::cout << std::endl << "===== beSigned(form) FAILED Test =====" << std::endl ;
+		Bureaucrat buro("Mina", 140);
+		Form formi("Contract", 100, 51);
+		std::cout << buro;
+		std::cout << formi;
+
+		formi.beSigned(buro);
+		std::cout << formi;
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << "Caught: " << e.what() << std::endl;
+	}
 	
 	return(0);
 }

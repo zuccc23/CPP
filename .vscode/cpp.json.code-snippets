@@ -20,20 +20,20 @@
 	"Class implementation C++": {
 		"prefix": "class_implement",
 		"body": [
-		"//CONSTRUCTOR",
+		"//CONSTRUCTOR(S)",
 		"${1:NomClasse}::${1:NomClasse}() {",
-		"\tstd::cout << \"\\033[90m constructor called.\\033[0m\" << std::endl;",
+		"\tstd::cout << \"\\033[90m✿ constructor called✿\\033[0m\" << std::endl;",
 		"}",
 		"",
 		"//COPY CONSTRUCTOR",
 		"${1:NomClasse}::${1:NomClasse}(const ${1:NomClasse}& to_copy) {",
-		"\tstd::cout << \"\\033[90m copy constructor called.\\033[0m\" << std::endl;",
+		"\tstd::cout << \"\\033[90m✿ copy constructor called✿\\033[0m\" << std::endl;",
 		"\t*this = to_copy;",
 		"}",
 		"",
 		"//COPY ASSIGNMENT",
 		"${1:NomClasse}& ${1:NomClasse}::operator=(const ${1:NomClasse}& to_copy) {",
-		"\tstd::cout << \"\\033[90m copy assignment operator called.\\033[0m\" << std::endl;",
+		"\tstd::cout << \"\\033[90m✿ copy assignment operator called✿\\033[0m\" << std::endl;",
 		"\tif (this != &to_copy)",
 		"\t{",
 		"\t\t//stuff to copy",
@@ -43,7 +43,7 @@
 		"",
 		"//DESTRUCTOR",
 		"${1:NomClasse}::~${1:NomClasse}() {",
-		"\tstd::cout << \"\\033[90m destructor called.\\033[0m\" << std::endl;",
+		"\tstd::cout << \"\\033[90m~ destructor called\\033[0m\" << std::endl;",
 		"}\n",
 		"//PUBLIC\n",
 		"//PRIVATE\n"
@@ -60,6 +60,14 @@
 		"return(0);"
 		],
 		"description": "basic cpp main"
+	},
+
+	"print std::cout": {
+		"prefix": "ppprint",
+		"body": [
+		"std::cout << \"\" << std::endl;"
+		],
+		"description": "print something on std::cout"
 	},
 
 	"header define": {

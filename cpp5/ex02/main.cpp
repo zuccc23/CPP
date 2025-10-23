@@ -11,11 +11,10 @@ int	main(void)
 {
 	try
 	{
-		std::cout << std::endl << "===== Making objects =====" << std::endl ;
-		Bureaucrat buro("Mina", 13);
-		ShrubberyCreationForm formi("idk");
-
 		std::cout << std::endl << "===== ShrubberyCreationForm Tests =====" << std::endl ;
+		Bureaucrat buro("Buro", 13);
+		ShrubberyCreationForm formi("Formi");
+
 		formi.beSigned(buro);
 		formi.execute(buro);
 	}
@@ -26,11 +25,10 @@ int	main(void)
 
 	try
 	{
-		std::cout << std::endl << "===== Making objects =====" << std::endl ;
-		Bureaucrat buro("Mina", 13);
-		RobotomyRequestForm formi("idk");
-
 		std::cout << std::endl << "===== RobotomyRequestForm Tests =====" << std::endl ;
+		Bureaucrat buro("Buro", 13);
+		RobotomyRequestForm formi("Formi");
+
 		formi.beSigned(buro);
 		formi.execute(buro);
 	}
@@ -41,11 +39,10 @@ int	main(void)
 	
 	try
 	{
-		std::cout << std::endl << "===== Making objects =====" << std::endl ;
-		Bureaucrat buro("Mina", 1);
-		PresidentialPardonForm formi("idk");
-
 		std::cout << std::endl << "===== PresidentialPardonForm Tests =====" << std::endl ;
+		Bureaucrat buro("Buro", 1);
+		PresidentialPardonForm formi("Formi");
+
 		formi.beSigned(buro);
 		formi.execute(buro);
 	}
@@ -56,11 +53,10 @@ int	main(void)
 
 	try
 	{
-		std::cout << std::endl << "===== Making objects =====" << std::endl ;
-		Bureaucrat buro("pompom", 140);
+		std::cout << std::endl << "===== Bureaucrat Tests =====" << std::endl ;
+		Bureaucrat buro("Buro", 140);
 		ShrubberyCreationForm formi("Shrub");
 
-		std::cout << std::endl << "===== Bureaucrat Tests =====" << std::endl ;
 		buro.signForm(formi);
 		buro.executeForm(formi);
 	}

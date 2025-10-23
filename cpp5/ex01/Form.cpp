@@ -3,7 +3,7 @@
 
 //CONSTRUCTOR
 Form::Form() : _name("default"), _gradeToSign(1), _gradeToExecute(1) {
-	std::cout << "\033[90mForm constructor called.\033[0m" << std::endl;
+	std::cout << "\033[90m✿Form constructor called✿\033[0m" << std::endl;
 }
 
 Form::Form(std::string new_name, int new_gradeToSign, int new_gradeToExecute) : _name(new_name), _gradeToSign(new_gradeToSign), _gradeToExecute(new_gradeToExecute){
@@ -12,18 +12,18 @@ Form::Form(std::string new_name, int new_gradeToSign, int new_gradeToExecute) : 
 		throw GradeTooHighException();
 	else if (_gradeToSign > 150 || _gradeToExecute > 150)
 		throw GradeTooLowException();
-	std::cout << "\033[90mForm constructor called.\033[0m" << std::endl;
+	std::cout << "\033[90m✿Form constructor called✿\033[0m" << std::endl;
 }
 
 //COPY CONSTRUCTOR
 Form::Form(const Form& to_copy) : _name(to_copy._name), _gradeToSign(to_copy._gradeToSign), _gradeToExecute(to_copy._gradeToExecute) {
-	std::cout << "\033[90mForm copy constructor called.\033[0m" << std::endl;
+	std::cout << "\033[90m✿Form copy constructor called✿\033[0m" << std::endl;
 	*this = to_copy;
 }
 
 //COPY ASSIGNMENT
 Form& Form::operator=(const Form& to_copy) {
-	std::cout << "\033[90mForm copy assignment operator called.\033[0m" << std::endl;
+	std::cout << "\033[90m✿Form copy assignment operator called✿\033[0m" << std::endl;
 	if (this != &to_copy)
 	{
 		_isSigned = to_copy._isSigned;
@@ -33,7 +33,7 @@ Form& Form::operator=(const Form& to_copy) {
 
 //DESTRUCTOR
 Form::~Form() {
-	std::cout << "\033[90mForm destructor called.\033[0m" << std::endl;
+	std::cout << "\033[90m~Form destructor called\033[0m" << std::endl;
 }
 
 //PUBLIC
@@ -59,10 +59,6 @@ bool	Form::getSign() const
 
 void	Form::beSigned(Bureaucrat& buro)
 {
-	// if (_gradeToSign < buro.getGrade())
-	// 	std::cout << buro.getName() << " couldn't sign " << _name << " because the bureaucrat's grade is too low." << std::endl;
-	// else
-	// 	std::cout << buro.getName() << " signed " << _name << std::endl;
 	if (_gradeToSign < buro.getGrade())
 		throw GradeTooLowException();
 	else

@@ -3,11 +3,11 @@
 
 //CONSTRUCTOR
 Bureaucrat::Bureaucrat() : _name("default"), _grade(150) {
-	std::cout << "\033[90mBureaucrat constructor called.\033[0m" << std::endl;
+	std::cout << "\033[90m✿Bureaucrat constructor called✿\033[0m" << std::endl;
 }
 
 Bureaucrat::Bureaucrat(std::string new_name, int new_grade) : _name(new_name), _grade(new_grade) {
-	std::cout << "\033[90mBureaucrat constructor called.\033[0m" << std::endl;
+	std::cout << "\033[90m✿Bureaucrat constructor called✿\033[0m" << std::endl;
 	if (_grade < 1)
 		throw GradeTooHighException();
 	else if (_grade > 150)
@@ -16,13 +16,13 @@ Bureaucrat::Bureaucrat(std::string new_name, int new_grade) : _name(new_name), _
 
 //COPY CONSTRUCTOR
 Bureaucrat::Bureaucrat(const Bureaucrat& to_copy) : _name(to_copy._name) {
-	std::cout << "\033[90mBureaucrat copy constructor called.\033[0m" << std::endl;
+	std::cout << "\033[90m✿Bureaucrat copy constructor called✿\033[0m" << std::endl;
 	*this = to_copy;
 }
 
 //COPY ASSIGNMENT
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat& to_copy) {
-	std::cout << "\033[90mBureaucrat copy assignment operator called.\033[0m" << std::endl;
+	std::cout << "\033[90m✿Bureaucrat copy assignment operator called✿\033[0m" << std::endl;
 	if (this != &to_copy)
 	{
 		_grade = to_copy._grade;
@@ -32,7 +32,7 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat& to_copy) {
 
 //DESTRUCTOR
 Bureaucrat::~Bureaucrat() {
-	std::cout << "\033[90mBureaucrat destructor called.\033[0m" << std::endl;
+	std::cout << "\033[90m~Bureaucrat destructor called\033[0m" << std::endl;
 }
 
 //PUBLIC
