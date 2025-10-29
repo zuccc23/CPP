@@ -30,7 +30,6 @@ Intern::~Intern() {
 //PUBLIC
 AForm*	Intern::makeForm(std::string formName, std::string formTarget)
 {
-	// void (AForm::*tab[])() = {, &Harl::info, &Harl::warning, &Harl::error};
 	std::string	list[] = {"shrubbery creation", "robotomy request", "presidential pardon"};
 
 	AForm* (*formCreators[])(const std::string&) = {
