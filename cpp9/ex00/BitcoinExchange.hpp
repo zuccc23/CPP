@@ -27,6 +27,7 @@ class BitcoinExchange {
 		std::map<std::string, float> _database;
 		int isValidDate(const std::string& date);
 		float findClosestPrice(const std::string& date);
+		void printClosestPrice(const std::string& date);
 
 	
 };
