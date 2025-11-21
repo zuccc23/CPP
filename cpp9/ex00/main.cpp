@@ -12,7 +12,7 @@ int main(int ac, char **av)
 		std::cout << "Error: could not open file" << std::endl;
 		return (1);
 	}
-	std::cout << std::endl << "===== test =====" << std::endl ;
+	std::cout << std::endl << "===== Tests =====" << std::endl ;
 	BitcoinExchange btc;
 	std::string filename = av[1];
 	try

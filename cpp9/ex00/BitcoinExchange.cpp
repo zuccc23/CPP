@@ -54,7 +54,7 @@ void BitcoinExchange::processInputValues(const std::string& filename)
 	std::string line; //maybe check if theres no line
 	std::getline(inputFile, line);
 	if (line != "date | value")
-		std::cout << "STOPP" << std::endl;
+		throw std::runtime_error("Error: header missing in the file: date | value");
 
 	while (std::getline(inputFile, line))
 	{
@@ -62,7 +62,7 @@ void BitcoinExchange::processInputValues(const std::string& filename)
 		size_t pipe_pos = line.find('|');
 		
 		if (pipe_pos == std::string::npos) {
-			std::cerr << "Error: bad input1 => " << line << std::endl;
+			std::cerr << "Error: bad input => " << line << std::endl;
 			continue;
 		}
 		
@@ -71,7 +71,7 @@ void BitcoinExchange::processInputValues(const std::string& filename)
 		
 		// ---------VALIDATE DATE------------
 		if (isValidDate(date) == false) {
-			std::cerr << "Error: bad input2 => " << date << std::endl;
+			std::cerr << "Error: bad input => " << date << std::endl;
 			continue;
 		}
 
@@ -83,16 +83,16 @@ void BitcoinExchange::processInputValues(const std::string& filename)
 		float value = strtof(value_str.c_str(), &endptr);
 		
 		if (*endptr != '\0' && *endptr != '\n') {
-			std::cerr << "Error: bad input3 => " << line << std::endl;
+			std::cerr << "Error: bad input => " << line << std::endl;
 			continue;
 		}
 		// ---------VALIDATE VALUE--------
 		if (value < 0) {
-			std::cerr << "Error: not a positive number." << std::endl;
+			std::cerr << "Error: not a positive number => " << line << std::endl;
 			continue;
 		}
 		if (value > 1000) {
-			std::cerr << "Error: too large a number." << std::endl;
+			std::cerr << "Error: too large a number => " << line << std::endl;
 			continue;
 		}
 
