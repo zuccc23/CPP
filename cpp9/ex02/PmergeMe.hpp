@@ -29,7 +29,13 @@ class PmergeMe {
 		//parsing
 		void	parseInput(int ac, char **av);
 		bool	isInt(std::string const &input);
+
+		//sorting
+		int 	binarySearchLimited(const std::vector<int> &chain, int value, int limitIndex);
+		void 	fordJohnsonVector(std::vector<int> &arr);
 	
 };
+
+void reducePairs(const std::vector<int> &input, std::vector<int> &result);
 
 #endif
